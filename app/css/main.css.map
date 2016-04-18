@@ -1,1 +1,1 @@
-{"version":3,"names":[],"mappings":"","sources":["main.scss"],"sourcesContent":[""],"file":"main.css","sourceRoot":"/source/"}
+{"version":3,"file":"main.css","sources":["main.scss"],"sourcesContent":["\ninput[type=textarea] {\n  width: auto;\n  height: 48px;\n}\n"],"mappings":"AACA,KAAK,CAAA,AAAA,IAAC,CAAD,QAAC,AAAA,EAAe;EACnB,KAAK,EAAE,IAAK;EACZ,MAAM,EAAE,IAAK,GACd","names":[],"sourceRoot":"/source/"}
