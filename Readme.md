@@ -1,11 +1,13 @@
-# Project Description
+# Learning Objectives
 
-This is a basic template for starting projects.
+After completing this assignment, you should:
 
-## Deployment
+- Understand the basics of jQuery $.ajax() and $.getJSON()
 
-To deploy your project just run:
+- Understand how to use a jQuery based Promise (deferred) and how Async works.
 
-- Make sure you have a lowercase folder name
-- `npm run deploy`
-- You should have a 'surge.sh' link now for your project
+## Deliverables
+
+- Submit the URL to your github repo
+
+- Deploy to Surgh.sh and put a link in your Readme.md
