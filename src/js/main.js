@@ -16,7 +16,7 @@ function formTemplateTextarea ( type, label, id, icon, options){
   return `
   <div class=${type} id="${id}">
     <i class="fontawesome fa fa-2x ${icon}"></i>
-    <input placeholder="${label}" type="${type}" />
+    <textarea placeholder="${label}" />
   </div>
   `
 }
@@ -34,9 +34,9 @@ function formTemplate ( type, label, id, icon){
 // form template for options
 function formTemplateOptions ( type, label, id, icon, options){
   return `
-  <div class=${type}  class="${id}">
+  <div class="${type}"  class="${id}">
     <input list="${id}" type="${type}" name="${label}" placeholder="${label}" /></label>
-    <datalist id=${id}>
+    <datalist id="${id}">
   `
 }
 

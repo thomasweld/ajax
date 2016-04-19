@@ -9863,7 +9863,7 @@ var form_content = (0, _jquery2['default'])('.form_content');
 
 // form textarea
 function formTemplateTextarea(type, label, id, icon, options) {
-  return '\n  <div class=' + type + ' id="' + id + '">\n    <i class="fontawesome fa fa-2x ' + icon + '"></i>\n    <input placeholder="' + label + '" type="' + type + '" />\n  </div>\n  ';
+  return '\n  <div class=' + type + ' id="' + id + '">\n    <i class="fontawesome fa fa-2x ' + icon + '"></i>\n    <textarea placeholder="' + label + '" />\n  </div>\n  ';
 }
 
 // form template
@@ -9873,7 +9873,7 @@ function formTemplate(type, label, id, icon) {
 
 // form template for options
 function formTemplateOptions(type, label, id, icon, options) {
-  return '\n  <div class=' + type + '  class="' + id + '">\n    <input list="' + id + '" type="' + type + '" name="' + label + '" placeholder="' + label + '" /></label>\n    <datalist id=' + id + '>\n  ';
+  return '\n  <div class="' + type + '"  class="' + id + '">\n    <input list="' + id + '" type="' + type + '" name="' + label + '" placeholder="' + label + '" /></label>\n    <datalist id="' + id + '">\n  ';
 }
 
 // form template for options
