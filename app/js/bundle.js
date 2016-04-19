@@ -9863,17 +9863,17 @@ var form_content = (0, _jquery2['default'])('.form_content');
 
 // form textarea
 function formTemplateTextarea(type, label, id, icon, options) {
-  return '\n  <div id="' + id + '">\n    <span class="fa ' + icon + '"></span>\n    <input placeholder="' + label + '" type="' + type + '" />\n  </div>\n  ';
+  return '\n  <div class=' + type + ' id="' + id + '">\n    <i class="fontawesome fa fa-2x ' + icon + '"></i>\n    <input placeholder="' + label + '" type="' + type + '" />\n  </div>\n  ';
 }
 
 // form template
 function formTemplate(type, label, id, icon) {
-  return '\n  <div id="' + id + '">\n    <span class="fa ' + icon + '"></span>\n    <input placeholder="' + label + '" type="' + type + '" />\n  </div>\n  ';
+  return '\n  <div class=' + type + ' id="' + id + '">\n    <i class="fontawesome fa fa-2x ' + icon + '"></i>\n    <input placeholder="' + label + '" type="' + type + '" />\n  </div>\n  ';
 }
 
 // form template for options
 function formTemplateOptions(type, label, id, icon, options) {
-  return '\n  <div class="' + id + '">\n    <input list="' + id + '" type="' + type + '" name="' + label + '" placeholder="' + label + '" /></label>\n    <datalist id=' + id + '>\n  ';
+  return '\n  <div class=' + type + '  class="' + id + '">\n    <input list="' + id + '" type="' + type + '" name="' + label + '" placeholder="' + label + '" /></label>\n    <datalist id=' + id + '>\n  ';
 }
 
 // form template for options
@@ -9885,6 +9885,11 @@ function formOptionList(option) {
 var request = _jquery2['default'].getJSON(baseURL);
 
 console.log(request);
+
+// request is an object that has methods like `.then`, `.success`, `.error` all ways of "resolving" that
+// request object.
+//
+// Inside of the `.then` we can do this...
 
 request.then(function (response) {
   //console.log(response);
@@ -9920,35 +9925,14 @@ request.then(function (response) {
 
       // appending whole html string to the dom element we selected earlier
       div_content.append(finalHTMLOutputList);
-
-      // function getOptions( input ){
-      //   return input.label;
-      // }
-      // console.log(getOptions());
-      // inputArea.forEach( getOptions(){
-      //
-      // }){
-      //   var htmlOptionsList = formOptionList( inputArea.options );
-      //   console.log(htmlOptionsList);
-      //   form_content.append(htmlOptions);
-      // };
-      //
-      // form_content.append(htmlOptionsList + '<datalist>' + htmlOptions + '</datalist>')
     }
   });
+}, function (res) {
+  console.log('error', error);
 });
 
-// filmReq.then(
-//   function (res){
-//     res.results.forEach(function (film){
-//       var html = movieTemplate(film.title, film.release_date);
-//       list.append(html);
-//     });
-//   },
-//   function (res) {
-//     console.log('error', error);
-//   }
-// );
+//
+// form_content.append("<button name='button'>Submit</button>");
 
 },{"jquery":1}]},{},[2])
 

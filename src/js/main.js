@@ -14,29 +14,27 @@ var form_content = $('.form_content');
 // form textarea
 function formTemplateTextarea ( type, label, id, icon, options){
   return `
-  <div id="${id}">
-    <span class="fa ${icon}"></span>
+  <div class=${type} id="${id}">
+    <i class="fontawesome fa fa-2x ${icon}"></i>
     <input placeholder="${label}" type="${type}" />
   </div>
   `
 }
-
 
 // form template
 function formTemplate ( type, label, id, icon){
   return `
-  <div id="${id}">
-    <span class="fa ${icon}"></span>
+  <div class=${type} id="${id}">
+    <i class="fontawesome fa fa-2x ${icon}"></i>
     <input placeholder="${label}" type="${type}" />
   </div>
   `
 }
 
-
 // form template for options
 function formTemplateOptions ( type, label, id, icon, options){
   return `
-  <div class="${id}">
+  <div class=${type}  class="${id}">
     <input list="${id}" type="${type}" name="${label}" placeholder="${label}" /></label>
     <datalist id=${id}>
   `
@@ -53,6 +51,12 @@ function formOptionList ( option ){
 var request = $.getJSON(baseURL);
 
 console.log(request);
+
+
+// request is an object that has methods like `.then`, `.success`, `.error` all ways of "resolving" that
+// request object.
+//
+// Inside of the `.then` we can do this...
 
 request.then(
   function (response) {
@@ -90,36 +94,17 @@ request.then(
 
         // appending whole html string to the dom element we selected earlier
         div_content.append(finalHTMLOutputList);
-
-
-        // function getOptions( input ){
-        //   return input.label;
-        // }
-        // console.log(getOptions());
-        // inputArea.forEach( getOptions(){
-        //
-        // }){
-        //   var htmlOptionsList = formOptionList( inputArea.options );
-        //   console.log(htmlOptionsList);
-        //   form_content.append(htmlOptions);
-        // };
-        //
-        // form_content.append(htmlOptionsList + '<datalist>' + htmlOptions + '</datalist>')
-
-
       }
     });
 
-});
+  },
 
-// filmReq.then(
-//   function (res){
-//     res.results.forEach(function (film){
-//       var html = movieTemplate(film.title, film.release_date);
-//       list.append(html);
-//     });
-//   },
-//   function (res) {
-//     console.log('error', error);
-//   }
-// );
+  function (res) {
+      console.log('error', error);
+    }
+
+);
+
+
+//
+// form_content.append("<button name='button'>Submit</button>");
