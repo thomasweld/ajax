@@ -1,6 +1,7 @@
 
 body {
   color: slateblue;
+  font-family: 'Roboto', sans-serif;
 }
 
 .form_header {
@@ -8,29 +9,39 @@ body {
 }
 
 .form_container {
-  width: 320px;
+  width: 260px;
   margin: 60px auto;
   padding: 20px;
 }
 
-
-
 input, textarea {
-  padding: 6px 6px 6px 40px;
+  padding: 8px 8px 8px 40px;
   margin: 8px;
   width: 100%;
+  border-radius: 2px;
+  border: 1px solid slateblue;
+
+  &:focus {
+    outline-color: #5DFDCB;
+    border:  1px solid #5DFDCB;
+  }
 }
 
 .text, .email, .textarea, .tel {
   position: relative;
   width: 100%;
+  border-radius: 2px;
+}
+
+.textarea {
+  height: 72px;
 }
 
 .select {
   position: relative;
   width: 100%;
+  border-radius: 2px;
 }
-
 
 form {
 }
@@ -43,17 +54,15 @@ button[type=button] {
   border-radius: 2px;
   background-color: white;
   color: slateblue;
+
+  &:hover {
+    background-color: slateblue;
+    color: white;
+  }
 }
 
 .fa {
   position: absolute;
   left: 14px;
   top: 10px;
-}
-
-.fa-comments {
-}
-
-textarea {
-
 }
