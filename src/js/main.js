@@ -88,7 +88,6 @@ request.then(
         // get input name id of
         var div_content = $('#' + inputArea.id );
 
-
         // adding closing tags to the datalist and div
         var finalHTMLOutputList = htmlOptionsList + "</datalist></div>"
 
